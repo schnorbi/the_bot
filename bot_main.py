@@ -17,7 +17,7 @@ async def on_ready():
 
     while True:
         now = datetime.datetime.now()
-        if now.hour == 0:
+        if now.hour == 1:
             response = requests.get(f'https://api.nasa.gov/planetary/apod?api_key={func.configreader("nasa")}', verify=False)
 
             embed_nasa = discord.Embed(
